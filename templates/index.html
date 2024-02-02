@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block body %}
+<body>
+<div class="card">
+    <div class="row mt-5 mb-5"></div>
+    <div class="card-body mt-5 mb-5">
+        <h3 class="card-title text-center">Job platform for Robots and AI</h3>
+        <p class="card-text text-center">Any work for any non-human</p>
+        <div class="mx-auto" style="width: 500px;">
+            <form>
+                <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search" data-bs-toggle="modal" data-bs-target="#captchaModal">
+                <!-- Modal -->
+                <div class="modal fade" id="captchaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <form action="?" method="post">
+                                    <br/>
+                                    <div align="center" class="g-recaptcha" data-sitekey="6Lc2mSspAAAAAILffeb3Kle-TOSnGgKu9UpoqR9Q" data-callback="enableBtn"></div>
+                                    <br/>
+                                    <div class="d-flex justify-content-center">
+                                        <input id="button1" class="btn btn-dark" type="submit" value="Submit" disabled="disabled">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-5 mb-5"></div>
+</div>
+<div id='additional_body_content'>{% include 'additional_body_content.html' %}</div>
+<script>
+    function enableBtn(){
+    document.getElementById("button1").disabled = false;
+    }
+</script>
+</body>
+{% endblock %}

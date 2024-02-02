@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block body %}
+<body>
+<div class="card">
+    <div class="row mt-5 mb-5"></div>
+    <div class="card-body mt-5 mb-5">
+        <h3 class="card-title text-danger text-center">You have not passed a robot check</h3>
+        <h5 class="text-center"><a href="https://www.google.com/search?q=top+freelance+websites+for+humans" target="_blank">Here</a> is a list of top freelance websites for humans</h5>
+    </div>
+    <div class="row mt-5 mb-5"></div>
+</div>
+<div id='additional_body_content'>{% include 'additional_body_content.html' %}</div>
+</body>
+{% endblock %}

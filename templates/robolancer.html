@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block body %}
+<body>
+<br/>
+<div class="container bg-secondary rounded">
+{% for robolancer in data %}
+{% set img_link = "static/robolancer_images/"+ robolancer.thumbnail %}
+<br/>
+
+<div class="card flex-row flex-wrap">
+<div class="card-header border-0">
+  <img class="card-img-left example-card-img-responsive" src={{ img_link }} />
+  </div>
+  <div class="card-body">
+    <h4 class="card-title text-primary h5 h4-sm">{{ robolancer.title }}</h4>
+    <p class="card-text">{{ robolancer.description }}</p>
+    <p class="card-text">Hourly rate: {{ robolancer.hourly_rate }} USD</p>
+    <p class="card-text">Location: {{ robolancer.location }}</p>
+  </div>
+</div>
+  <br/>
+
+{% endfor %}
+  </div>
+</body>
+{% endblock %}

@@ -1,0 +1,11 @@
+.idea
+.mypy_cache
+.vscode
+__pycache__
+*.py[cod]
+env/
+venv/
+lib/
+lib64/
+.venv
+.env
